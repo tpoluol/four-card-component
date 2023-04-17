@@ -8,11 +8,12 @@ function App() {
     <main className="bg-VeryLightGray flex-col font-poppins flex justify-center items-center min-h-screen">
       <article className="m-6 mt-20">
         <Header />
-        <div className="flex flex-col gap-5 mt-16">
+        <div className="flex flex-col gap-5 mt-16 md:flex-row md:flex-wrap md:justify-center">
           {data.map((data, index) => {
             return (
               <Card
                 key={index}
+                index={index}
                 title={data.title}
                 content={data.content}
                 color={data.color}
